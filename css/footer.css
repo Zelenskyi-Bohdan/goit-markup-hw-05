@@ -43,6 +43,7 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 16px;
+  margin-right: 83px;
 }
 
 .footer-cocial-text {
@@ -79,4 +80,63 @@
 .footer-link:focus {
   cursor: pointer;
   background-color: #31d0aa;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 453px;
+  height: 80px;
+}
+
+.footer-label {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-input-link-container {
+  display: flex;
+  gap: 24px;
+  width: 453px;
+}
+
+.footer-input {
+  display: flex;
+  border: 1px solid #fff;
+  background-color: #2e2f42;
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 264px;
+  height: 40px;
+}
+
+.footer-input::placeholder {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.subscribe-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 4px;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.foter-subscribe-icon {
+  fill: #fff;
 }

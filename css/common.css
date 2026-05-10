@@ -32,6 +32,15 @@ img {
   max-width: 100%;
 }
 
+button {
+  font-family: inherit;
+  color: currentColor;
+}
+
+input {
+  font-family: inherit;
+}
+
 .container {
   width: 1158px;
   margin: 0 auto;
