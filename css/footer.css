@@ -82,22 +82,23 @@
   background-color: #31d0aa;
 }
 
-.subscribe {
+.subscribe-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 16px;
   width: 453px;
   height: 80px;
 }
 
-.footer-label {
+.subscribe-text {
   color: #fff;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 
-.footer-input-link-container {
+.footer-input-container {
   display: flex;
   gap: 24px;
   width: 453px;

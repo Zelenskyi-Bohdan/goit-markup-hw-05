@@ -11,13 +11,15 @@
   justify-content: center;
   align-items: center;
 
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: hidd;
 }
 
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
@@ -51,12 +53,18 @@
   cursor: pointer;
 }
 
+.modal-button-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-button:hover,
 .modal-button:focus {
   background-color: #404bbf;
 }
 
-.modal-button:hover .modal-button-icon {
+.modal-button:hover,
+.modal-button:focus .modal-button-icon {
   fill: #fff;
 }
 
@@ -107,7 +115,7 @@
   top: 26px;
   left: 16px;
   fill: #2e2f42;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -120,10 +128,10 @@
   max-width: 360px;
   min-height: 40px;
   outline: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus-within {
+.form-input:focus {
   border-color: #4d5ae5;
 }
 
@@ -137,6 +145,7 @@
   gap: 4px;
   width: 360px;
   height: 138px;
+  margin-bottom: 16px;
 }
 
 .form-textarea {
@@ -151,6 +160,7 @@
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea::placeholder {
@@ -159,6 +169,10 @@
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+}
+
+.form-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .polisy-container {
