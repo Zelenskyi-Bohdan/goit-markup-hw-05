@@ -490,7 +490,7 @@
             </li>
           </ul>
         </div>
-        <div class="subscribe">
+        <form class="subscribe">
           <label for="footer-input" class="footer-label">Subscribe</label>
           <div class="footer-input-link-container">
             <input
@@ -501,19 +501,19 @@
               class="footer-input"
             />
             <div class="subscribe-link-container">
-              <a href="" class="subscribe-link">
+              <button type="submit" class="subscribe-button">
                 Subscribe
                 <svg class="foter-subscribe-icon" width="24" height="24">
                   <use href="./images/icons.svg#subscribe"></use>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" id="modal">
       <div class="modal">
         <button type="button" class="modal-button">
           <svg width="8" height="8" class="modal-button-icon">
