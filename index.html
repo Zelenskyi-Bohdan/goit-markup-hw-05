@@ -562,13 +562,25 @@
                 class="form-textarea"
               ></textarea>
             </div>
-            <div class="polisy-container">
-              <input type="checkbox" name="polisy" id="policy" />
-              <label for="policy" class="policy-label"
-                >I accept the terms and conditions of the</label
-              >
-              <span class="privacy-policy">Privacy Policy</span>
-            </div>
+          </div>
+          <div class="polisy-container">
+            <input
+              type="checkbox"
+              name="polisy"
+              id="policy"
+              class="policy-input"
+            />
+            <label for="policy" class="policy-label">
+              <span>
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#checkbox-o"></use>
+                </svg>
+              </span>
+              <span
+                >I accept the terms and conditions of the
+                <a href="" class="privacy-policy"> Privacy Policy </a>
+              </span>
+            </label>
           </div>
           <button type="submit" class="form-button">Send</button>
         </form>

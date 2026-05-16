@@ -10,13 +10,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal {
   background-color: #fcfcfc;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   border-radius: 4px;
   padding: 72px 24px 24px;
   width: 408px;
@@ -59,6 +66,7 @@
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 .form {
@@ -66,7 +74,6 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 24px;
   width: 360px;
   height: 448px;
 }
@@ -74,7 +81,7 @@
 .form-contacts-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   width: 360px;
   height: 368px;
 }
@@ -100,6 +107,7 @@
   top: 26px;
   left: 16px;
   fill: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -112,9 +120,10 @@
   max-width: 360px;
   min-height: 40px;
   outline: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus {
+.form-input:focus-within {
   border-color: #4d5ae5;
 }
 
@@ -156,10 +165,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
   gap: 8px;
   width: 360px;
   height: 16px;
+}
+
+.policy-input {
+  display: none;
 }
 
 .policy-label {
@@ -191,4 +203,12 @@
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  margin-top: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: #404bbf;
 }
