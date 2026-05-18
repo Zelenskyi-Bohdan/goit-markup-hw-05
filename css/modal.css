@@ -182,10 +182,26 @@
   gap: 8px;
   width: 360px;
   height: 16px;
+  position: relative;
 }
 
 .policy-input {
-  display: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+input[type="checkbox"]:checked {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #404bbf;
+  background-color: #404bbf;
+}
+
+input[type="checkbox"]:checked .policy-icon {
+  opacity: 1;
 }
 
 .policy-label {
@@ -193,6 +209,14 @@
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+
+.policy-icon {
+  position: absolute;
+  top: 4.27px;
+  left: 3.47px;
+  opacity: 0;
+  fill: #f4f4fd;
 }
 
 .privacy-policy {
