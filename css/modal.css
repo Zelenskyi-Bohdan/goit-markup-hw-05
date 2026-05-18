@@ -10,11 +10,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
 }
+
+/* opacity: 0;
+  pointer-events: none;
+  visibility: hidden; */
 
 .modal-overlay.is-open {
   opacity: 1;
@@ -63,7 +63,10 @@
   background-color: #404bbf;
 }
 
-.modal-button:hover,
+.modal-button:hover .modal-button-icon {
+  fill: #fff;
+}
+
 .modal-button:focus .modal-button-icon {
   fill: #fff;
 }
@@ -135,7 +138,7 @@
   border-color: #4d5ae5;
 }
 
-.form-icon:focus-within {
+.form-input:focus .form-icon {
   fill: #4d5ae5;
 }
 
@@ -175,7 +178,7 @@
   border-color: #4d5ae5;
 }
 
-.polisy-container {
+.policy-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -185,14 +188,24 @@
   position: relative;
 }
 
-.policy-input {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+.policy-label {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
-input[type="checkbox"]:checked {
+.policy-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  position: absolute;
+  opacity: 0;
+}
+
+.policy-input:checked {
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -200,23 +213,31 @@ input[type="checkbox"]:checked {
   background-color: #404bbf;
 }
 
-input[type="checkbox"]:checked .policy-icon {
-  opacity: 1;
-}
-
-.policy-label {
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .policy-icon {
-  position: absolute;
-  top: 4.27px;
-  left: 3.47px;
   opacity: 0;
   fill: #f4f4fd;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-input:checked + .custom-checkbox {
+  background-color: #404bbf;
+  border-color: #404bbf;
+}
+
+.policy-input:checked + .custom-checkbox .policy-icon {
+  opacity: 1;
 }
 
 .privacy-policy {
